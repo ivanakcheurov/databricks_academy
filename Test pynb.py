@@ -17,3 +17,16 @@ iris_df = spark.createDataFrame(iris_pd)
 
 # Display the Iris dataset
 display(iris_df)
+
+# COMMAND ----------
+
+from pyspark.sql import Row
+
+# Create a list of Row objects
+cars_list = [Row(make="Toyota", model="Corolla", year=2020), Row(make="Honda", model="Civic", year=2018)]
+
+# Convert the list to a Spark DataFrame
+cars_df = spark.createDataFrame(cars_list)
+
+# Display the DataFrame
+display(cars_df)
